@@ -1,0 +1,96 @@
+<svg width="1080" height="1920" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <defs>
+    <radialGradient id="bgGrad" cx="0.5" cy="0.5" r="0.7">
+      <stop offset="0%" stop-color="#1e2328"/>
+      <stop offset="100%" stop-color="#0c1317"/>
+    </radialGradient>
+    
+    <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#25d366"/>
+      <stop offset="100%" stop-color="#128c7e"/>
+    </linearGradient>
+    
+    <linearGradient id="dotGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#25d366"/>
+      <stop offset="100%" stop-color="#128c7e"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1080" height="1920" fill="url(#bgGrad)"/>
+  
+  <!-- WhatsApp Logo Container -->
+  <g transform="translate(540, 800)">
+    <!-- Logo background -->
+    <circle cx="0" cy="0" r="80" fill="url(#logoGrad)" opacity="0.95">
+      <animateTransform 
+        attributeName="transform" 
+        type="scale" 
+        values="1;1.1;1" 
+        dur="2s" 
+        repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- WhatsApp phone icon -->
+    <g fill="white" opacity="0.95">
+      <path d="M-35,-35 Q-35,-45 -25,-45 L25,-45 Q35,-45 35,-35 L35,10 Q35,20 25,20 L10,20 L0,35 L-10,20 L-25,20 Q-35,20 -35,10 Z"/>
+      <!-- Phone screen -->
+      <rect x="-20" y="-30" width="40" height="50" rx="4" fill="#0c1317" opacity="0.6"/>
+      <!-- Chat bubbles -->
+      <circle cx="-8" cy="-15" r="3" opacity="0.9"/>
+      <circle cx="0" cy="-5" r="3" opacity="0.7"/>
+      <circle cx="8" cy="5" r="3" opacity="0.5"/>
+    </g>
+  </g>
+  
+  <!-- Loading dots -->
+  <g transform="translate(540, 1000)">
+    <circle cx="-40" cy="0" r="12" fill="url(#dotGrad)">
+      <animateTransform 
+        attributeName="transform" 
+        type="translate" 
+        values="0,0; 0,-20; 0,0" 
+        dur="1.4s" 
+        begin="0s" 
+        repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="1.4s" begin="0s" repeatCount="indefinite"/>
+    </circle>
+    
+    <circle cx="0" cy="0" r="12" fill="url(#dotGrad)">
+      <animateTransform 
+        attributeName="transform" 
+        type="translate" 
+        values="0,0; 0,-20; 0,0" 
+        dur="1.4s" 
+        begin="0.2s" 
+        repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="1.4s" begin="0.2s" repeatCount="indefinite"/>
+    </circle>
+    
+    <circle cx="40" cy="0" r="12" fill="url(#dotGrad)">
+      <animateTransform 
+        attributeName="transform" 
+        type="translate" 
+        values="0,0; 0,-20; 0,0" 
+        dur="1.4s" 
+        begin="0.4s" 
+        repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="1.4s" begin="0.4s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Loading text -->
+  <text x="540" y="1150" text-anchor="middle" fill="#8696a0" font-family="Arial, sans-serif" font-size="32" font-weight="400">
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" repeatCount="indefinite"/>
+    Loading WhatsApp...
+  </text>
+  
+  <!-- Progress bar background -->
+  <rect x="390" y="1200" width="300" height="6" rx="3" fill="#2a3942" opacity="0.5"/>
+  
+  <!-- Progress bar fill -->
+  <rect x="390" y="1200" width="0" height="6" rx="3" fill="url(#dotGrad)">
+    <animate attributeName="width" values="0;300;0" dur="3s" repeatCount="indefinite"/>
+  </rect>
+</svg>

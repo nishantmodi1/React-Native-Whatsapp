@@ -1,0 +1,12 @@
+# 8.10
+
+npm install -g expo-cli
+
+npx expo start --tunnel
+
+# Stop the current server (Ctrl+C)
+# Then update packages
+npx expo install --fix
+
+# Restart the server
+npx expo start --tunnel
